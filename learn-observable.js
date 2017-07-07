@@ -40,3 +40,16 @@ if1.subscribe(
     err => console.log(err),
     () => console.log('complete if1')
 );
+
+var selectObservable = {
+    'a': Observable.return(1),
+    'b': Observable.return(0)
+}
+
+var defaultObservable = Observable.empty();
+
+var case1 = Observable.case(
+    () => {return 'a';},
+    selectObservable,
+    defaultObservable
+);
