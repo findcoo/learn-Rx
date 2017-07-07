@@ -38,11 +38,13 @@ Rx를 도입하여 비동기 프로그래밍을 단순화 하고 비동기 방�
             * 기본적인 생성 방법, callback 함수에 observer 매개변수를 전달한다.
         * Defer [(doc)](http://reactivex.io/documentation/operators/defer.html)
             * subscribe를 호출 할 때 까지 대기하고 이후 Observable을 생성한다.
+
                 부연 설명하자면, Observable은 두 가지 특성으로 구분되는데.
                 cold와 hot이다. cold는 Observable이 생성된 후에 바로 프로세싱되는
                 것이 아니라 특정 메소드에 따라 프로세싱된다. 반면 hot은 생성과 동시에
                 프로세싱 됨으로 hot같은 경우는 defer와 같이 cold로 만들어 줄수 있는
                 대기처리가 필요하다.
+
                 ```javascript
                 var defer1 = Observable.defer(() => {
                     return obv1();
@@ -90,11 +92,3 @@ Rx를 도입하여 비동기 프로그래밍을 단순화 하고 비동기 방�
                 );
                 
                 ```
-                
-                
-
-
-
-                    
-                     
-                    
