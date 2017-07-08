@@ -4,9 +4,10 @@ const Rx = require('rx'),
     Observable = Rx.Observable;
 
 
+// Create
 var obs1 = () => {
     return Observable.create(observer => {
-        for (let i=0; i < 10; i++) {
+        for (let i=0; i < 13; i++) {
             observer.onNext(i);
         }
         observer.onCompleted();
@@ -52,4 +53,18 @@ var case1 = Observable.case(
     () => {return 'a';},
     selectObservable,
     defaultObservable
+);
+
+var context = { hello: 'world' };
+
+var start1 = Observable.start(
+  function() { return this.hello; },
+  context,
+  Rx.Scheduler.timeout
+);
+
+start1.subscribe(
+  res => console.log(res),
+  err => console.log(err),
+  () => console.log('complete start1')
 );
