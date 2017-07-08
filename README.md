@@ -136,7 +136,7 @@ Rx를 도입하여 비동기 프로그래밍을 단순화 하고 비동기 방�
             );
             ```
     * Transforming  
-       * buffer 
+       * buffer [(doc)](http://reactivex.io/documentation/operators/buffer.html) 
         
            주기적으로 방출되는 아이템을 모아서 집합으로 만들고 집합을 방출시킨다.
            buffer의 기준은 시간적 기준과 갯수 기준으로 나뉜다.
