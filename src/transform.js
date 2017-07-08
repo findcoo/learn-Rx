@@ -10,9 +10,15 @@ Observable.range(1,5)
     err => console.log(err),
     () => console.log('compete buffer'));
 
-Observable
-  .of(1,2,3)
+Observable.of(1,2,3)
   .subscribe(
     res => console.log(res),
     err => console.log(err),
     () => console.log('complete of'));
+
+Observable.range(2,3)
+  .selectMany(res => {return Observable.range(1,res)})
+  .subscribe(
+    res => console.log(res),
+    err => console.log(err),
+    () => console.log('complete selectMany'));
