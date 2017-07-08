@@ -22,3 +22,13 @@ Observable.range(2,3)
     res => console.log(res),
     err => console.log(err),
     () => console.log('complete selectMany'));
+
+var charObs = Observable.fromArray(['a','b','c','d'])
+charObs
+  .flatMap(
+    (x, i) => {return [x,i]},
+    (x, y, ix, iy) => {return [x, y, ix, iy]})
+  .subscribe(
+    res => console.log(res),
+    err => console.log(err),
+    () => console.log('complete flatMap'));

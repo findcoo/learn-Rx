@@ -152,4 +152,24 @@ Rx를 도입하여 비동기 프로그래밍을 단순화 하고 비동기 방�
      
      ```
 
-    * FlatMap [(doc)](http://reactivex.io/documentation/operators.html#transforming)
+    * FlatMap [(doc)](http://reactivex.io/documentation/operators/flatmap.html)
+      
+      Observable이 방출하는 아이템을 다른 Observable로 확산시킨다.
+      
+       args|return|설명
+      :-:|:-:|:-:
+       0|Array|반환된 Array이는 index만큼 Observable을 확산한다.
+       1|Any|확산되었던 값들을 다시 하나의 Observable로 취합한다.
+      
+      **selectMany는 flatMap의 alias** 
+      ```javascript
+      Observable.range(2,3)
+        .selectMany(res => {return Observable.range(1,res)})
+        .subscribe(
+          res => console.log(res),
+          err => console.log(err),
+          () => console.log('complete selectMany'));
+      ```
+      
+     
+      
