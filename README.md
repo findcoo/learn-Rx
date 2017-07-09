@@ -151,7 +151,6 @@ Rx를 도입하여 비동기 프로그래밍을 단순화 하고 비동기 방�
           .subscribe(res => console.log(res));
      
      ```
-
     * FlatMap [(doc)](http://reactivex.io/documentation/operators/flatmap.html)
       
       Observable이 방출하는 아이템을 다른 Observable로 확산시킨다.
