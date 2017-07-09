@@ -33,5 +33,5 @@ Rx를 도입하여 비동기 프로그래밍을 단순화 하고 비동기 방�
   rx의 핵심이라 할 수 있다. 
   observable 객체를 이용한 프로그래밍의 모든 인터페이스들
 
-  * [Create](https://github.com/findcoo/learn-Rx/blob/master/src/CREATE.md)
-  * [Transform](https://github.com/findcoo/learn-Rx/blob/master/src/TRANSFORM.md)
+  * [Create](https://github.com/findcoo/learn-Rx/blob/master/src/Create.md)
+  * [Transform](https://github.com/findcoo/learn-Rx/blob/master/src/Transform.md)
