@@ -8,7 +8,7 @@
     obs1()
         .bufferWithCount(2)
         .subscribe(res => console.log(res));
-   ```
+    ```
 
   * FlatMap [(doc)](http://reactivex.io/documentation/operators/flatmap.html)
     
