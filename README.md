@@ -35,3 +35,10 @@ Rx를 도입하여 비동기 프로그래밍을 단순화 하고 비동기 방�
 
   * [Create](https://github.com/findcoo/learn-Rx/blob/master/src/Create.md)
   * [Transform](https://github.com/findcoo/learn-Rx/blob/master/src/Transform.md)
+
+
+* Redux-observable
+
+  rxjs를 이용해 redux 상태를 관리하는 라이브러리.
+  가장 큰 특징은 상태를 마치 서사시 처럼 기승전결이 있는 단계별 흐름으로
+  관리한다는 것이다. 이를 `Epic`이라 부른다.
